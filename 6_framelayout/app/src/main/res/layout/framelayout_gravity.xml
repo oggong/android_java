@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--9 개 TextView 생성-->
+
+    <!--첫 생성은 좌상단  시작은 좌에서 우 위에서 아래로-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="left|top"
+        android:background="@color/colorPrimaryDark" />
+
+    <!--두번째 생성은 가운데 위-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@color/colorPrimaryDark" />
+
+    <!--우상단 생성-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="right|top"
+        android:background="@color/colorPrimaryDark" />
+
+    <!--가운데 왼쪽-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical|left"
+        android:background="@color/colorPrimaryDark" />
+
+    <!--정 가운데-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark" />
+
+    <!--가운데 오른쪽-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical|right"
+        android:background="@color/colorPrimaryDark" />
+
+    <!--아래 왼쪽-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|left"
+        android:background="@color/colorPrimaryDark" />
+
+    <!--아래 가운데-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|center"
+        android:background="@color/colorPrimaryDark" />
+
+    <!--아래 오른쪽-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="right|bottom"
+        android:background="@color/colorPrimaryDark" />
+
+</FrameLayout>
