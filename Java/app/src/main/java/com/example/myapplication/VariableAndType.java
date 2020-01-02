@@ -3,7 +3,7 @@ package com.example.myapplication;
 public class VariableAndType {
 
     // 실습 내용
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
 
         //primitive type variable
 
