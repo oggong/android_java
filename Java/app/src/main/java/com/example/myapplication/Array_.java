@@ -53,7 +53,7 @@ public class Array_ {
         }
 
         // remove
-        ints.remove(0);
+        ints.remove(0) ;
         System.out.println(ints);
 
     }

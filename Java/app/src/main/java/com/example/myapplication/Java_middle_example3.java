@@ -27,8 +27,8 @@ public class Java_middle_example3 {
     public static void multipleTwoArrayLists(ArrayList<Integer> list1, ArrayList<Integer> list2) {
 
         for (int i = 0; i < list1.size(); i++) {
-            int result = list1.get(i) * list2.get(i);
-            System.out.println(result);
+                int result = list1.get(i) * list2.get(i);
+                System.out.println(result);
         }
     }
 
