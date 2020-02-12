@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    ArrayList<String> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listView = findViewById(R.id.list_view);
 
-        ArrayList<String> list = new ArrayList<>();
+        list = new ArrayList<>();
         list.add("가");
-        list.add("가");
+        list.add("나");
         list.add("가");
         list.add("가");
         list.add("가");
@@ -49,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
 
         //Header , Footer
         LayoutInflater layoutInflater = LayoutInflater.from(this);
-        View Header = layoutInflater.inflate(R.layout.header_view, null, false);
-        View Footer = layoutInflater.inflate(R.layout.footer_view, null, false);
+        View header = layoutInflater.inflate(R.layout.header_view, null, false);
+        View footer = layoutInflater.inflate(R.layout.footer_view, null, false);
 
-        listView.addHeaderView(Header);
-        listView.addFooterView(Footer);
+        listView.addHeaderView(header);
+        listView.addFooterView(footer);
 
         // Header Footer 넣을시에 무조건 내용이 존재해야 사용 할 수 있음.
 
@@ -63,8 +64,20 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Adapter ListView 적용
-        MyAdapter myAdapter = new MyAdapter(MainActivity.this, list);
+        final MyAdapter myAdapter = new MyAdapter(MainActivity.this, list);
         listView.setAdapter(myAdapter);
+
+        // Header 클릭하면 두번째 리스트인 나 를 가로 바꾸고 다시 리스트를 불러올 수 있도록 하자!
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                list.set(1, "가");
+                Log.d("list_change", "list:" + list);
+                myAdapter.notifyDataSetChanged(); // 변화를 체크하고 변화가 있다면 체인지
+            }
+        });
+
+
     }
 
     class MyAdapter extends BaseAdapter {
